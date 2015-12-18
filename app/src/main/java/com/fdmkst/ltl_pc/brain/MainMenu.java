@@ -13,11 +13,14 @@ import android.widget.Button;
 
 import com.facebook.login.LoginManager;
 
-public class MainMenu extends AppCompatActivity {
+public class MainMenu extends AppCompatActivity implements View.OnClickListener {
+    Button startbtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+        startbtn = (Button) findViewById(R.id.start_button);
+        startbtn.setOnClickListener(this);
         Intent intent = getIntent();
 //        if (savedInstanceState == null) {
 //            getSupportFragmentManager().beginTransaction()
@@ -43,6 +46,18 @@ public class MainMenu extends AppCompatActivity {
             return true;
         }
         return super.onOptionsItemSelected(item);
+    }
+
+    private void startGame(){
+        startActivity(new Intent("com.fdmkst.ltl_pc.brain.Game"));
+    }
+    @Override
+    public void onClick(View v) {
+        switch (v.getId()){
+            case R.id.start_button:
+                startGame();
+                break;
+        }
     }
 
     /**

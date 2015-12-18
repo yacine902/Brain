@@ -39,8 +39,21 @@
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
             </intent-filter>
-        </activity>
 
+        </activity>
+        <activity android:name=".Game"
+            android:label="Game"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+
+            >
+            <intent-filter>
+                <action android:name="com.fdmkst.ltl_pc.brain.Game" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </activity>
     </application>
 
 </manifest>
