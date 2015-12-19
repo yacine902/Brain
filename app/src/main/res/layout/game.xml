@@ -33,7 +33,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -48,7 +48,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -63,7 +63,7 @@
         android:layout_marginLeft="20dp"
         android:layout_marginRight="20dp"
         android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -78,7 +78,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,7 +93,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -108,7 +108,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -123,7 +123,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -138,7 +138,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -153,7 +153,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -168,7 +168,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -183,7 +183,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -198,7 +198,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -213,7 +213,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -228,7 +228,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -243,7 +243,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -258,7 +258,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -273,7 +273,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -288,7 +288,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -303,7 +303,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -318,7 +318,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -333,7 +333,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -348,7 +348,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -363,7 +363,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -378,7 +378,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -393,7 +393,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -408,7 +408,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -423,7 +423,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -438,7 +438,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -453,7 +453,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -468,7 +468,7 @@
             android:layout_marginLeft="20dp"
             android:layout_marginRight="20dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0" />
 
         <ImageView
             android:layout_column="0"
@@ -478,7 +478,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="0"
@@ -487,7 +489,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="0"
@@ -496,7 +500,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="0"
@@ -505,7 +511,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="0"
@@ -514,7 +522,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
             android:layout_row="1"
@@ -523,7 +533,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="1"
@@ -532,7 +544,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="1"
@@ -541,7 +555,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="1"
@@ -550,7 +566,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="1"
@@ -559,7 +577,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
             android:layout_row="2"
@@ -568,7 +588,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="2"
@@ -577,7 +599,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="2"
@@ -586,7 +610,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="2"
@@ -595,7 +621,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="2"
@@ -604,7 +632,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
             android:layout_row="3"
@@ -613,7 +643,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="3"
@@ -622,7 +654,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="3"
@@ -631,7 +665,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="3"
@@ -640,7 +676,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="3"
@@ -649,7 +687,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
             android:layout_row="4"
@@ -658,7 +698,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="4"
@@ -667,7 +709,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="4"
@@ -676,7 +720,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="4"
@@ -685,7 +731,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="4"
@@ -694,7 +742,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
             android:layout_row="5"
@@ -703,7 +753,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
             android:layout_row="5"
@@ -712,7 +764,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
             android:layout_row="5"
@@ -721,7 +775,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
             android:layout_row="5"
@@ -730,7 +786,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
             android:layout_row="5"
@@ -739,7 +797,9 @@
             android:layout_width="60dp"
             android:layout_height="60dp"
             android:visibility="visible"
-            android:alpha="0.0f" />
+            android:alpha="0"
+            android:clickable="true"
+            android:onClick="onCircleClick" />
     </GridLayout>
 
     <GridLayout
