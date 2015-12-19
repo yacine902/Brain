@@ -10,8 +10,11 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.concurrent.TimeUnit;
 
 public class Game extends AppCompatActivity{
+    ArrayList<Integer> nums = new ArrayList<Integer>();
+    int level = 10,corr=0,wins=0,fails=0;
     TextView S00,S01,S02,S03,S04,
             S10,S11,S12,S13,S14,
             S20,S21,S22,S23,S24,
@@ -166,14 +169,13 @@ public class Game extends AppCompatActivity{
 //        for(int i =0 ; i<30 ; i++)
 //            circles[i].setOnClickListener(this);
         //System.out.println(circles[5].getAlpha());
-        generateNums(5);
+        generateNums(3);
 
     }
     public void generateNums(int n){
         int[] num = new int[n];
         int i=0;
         Random rand = new Random();
-        ArrayList<Integer> nums = new ArrayList<Integer>();
 
         while(nums.size()<n){
             int random = rand.nextInt(30)+1;
@@ -184,13 +186,60 @@ public class Game extends AppCompatActivity{
             numbers[nums.get(i)-1].setAlpha(1);
             i++;
         }
+        try {
+            TimeUnit.MILLISECONDS.sleep(700);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
         for(i = 0 ; i < n ; i++){
+            circles[nums.get(i)-1].setClickable(true);
             circles[nums.get(i)-1].setAlpha((float)1.0);
+        }
+    }
+    public void reset(){
+        for(int i=0 ; i<30 ; i++){
+            //numbers[i].setAlpha(0);
+            circles[i].setAlpha((float)0.0);
+            circles[i].setClickable(false);
         }
     }
     public void onCircleClick(View v){
         v.setAlpha(0);
+        int i = 0;
+        while (circles[nums.get(i)-1].getAlpha()==0 && i<nums.size())
+            i++;
+        if(i-1<nums.indexOf(v)){
+            fails++;
+            level--;
+            System.out.println("fail");
+            reset();
+            if(level>0)
+                if(nums.size()!=3)
+                    generateNums(nums.size()-1);
+                else
+                    generateNums(nums.size());
+        }
+        else {
+            corr++;
+
+            if (i == nums.size()){
+                System.out.println("win  ..");
+                if (level > 0) {
+                    wins++;
+                    level--;
+                    reset();
+                    generateNums(nums.size() + 1);
+                }
+            }
+        }
+
+        if(level==0)
+            System.out.println("count age");
+
+
     }
+
 
 
 }

@@ -479,7 +479,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -490,7 +490,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -501,7 +501,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -512,7 +512,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -523,7 +523,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
@@ -534,7 +534,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -545,7 +545,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -556,7 +556,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -567,7 +567,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -578,7 +578,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
@@ -589,7 +589,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -600,7 +600,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -611,7 +611,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -622,7 +622,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -633,7 +633,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
@@ -644,7 +644,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -655,7 +655,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -666,7 +666,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -677,7 +677,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -688,7 +688,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
@@ -699,7 +699,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -710,7 +710,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -721,7 +721,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -732,7 +732,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -743,7 +743,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="0"
@@ -754,7 +754,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="1"
@@ -765,7 +765,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="2"
@@ -776,7 +776,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="3"
@@ -787,7 +787,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
         <ImageView
             android:layout_column="4"
@@ -798,7 +798,7 @@
             android:layout_height="60dp"
             android:visibility="visible"
             android:alpha="0"
-            android:clickable="true"
+            android:clickable="false"
             android:onClick="onCircleClick" />
     </GridLayout>
 
