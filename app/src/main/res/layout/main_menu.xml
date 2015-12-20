@@ -16,11 +16,6 @@
     android:orientation="vertical"
     style="@style/AppTheme.NoActionBar">
     <!--tools:showIn="@layout/activity_main" -->
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text=""/>
-
 
     <ImageView
         android:layout_width="wrap_content"
@@ -35,13 +30,14 @@
         android:layout_centerHorizontal="true"
         android:baselineAlignBottom="false"
         android:contentDescription="@string/logo"
-        android:layout_alignParentEnd="false"
+        android:layout_margin="10dp" />
+        <!--android:layout_alignParentEnd="false"
         android:layout_alignParentStart="false"
         android:layout_alignParentTop="true"
         android:layout_alignParentLeft="false"
         android:layout_alignParentBottom="false"
-        android:layout_alignParentRight="false"
-        android:layout_margin="10dp" />
+        android:layout_alignParentRight="false"-->
+
 
     <GridLayout
         android:layout_width="match_parent"

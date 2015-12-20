@@ -19,7 +19,6 @@
             android:adjustViewBounds="false"
             android:layout_alignWithParentIfMissing="false"
             android:layout_centerVertical="true"
-            android:layout_above="@+id/gridLayout"
             android:layout_centerHorizontal="true"
             android:baselineAlignBottom="false" />
     <TextView

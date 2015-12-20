@@ -52,7 +52,6 @@
             <intent-filter>
                 <action android:name="com.fdmkst.ltl_pc.brain.Game" />
                 <category android:name="android.intent.category.DEFAULT" />
-
             </intent-filter>
 
         </activity>

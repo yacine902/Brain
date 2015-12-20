@@ -2,19 +2,26 @@ package com.fdmkst.ltl_pc.brain;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.Random;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.concurrent.TimeUnit;
+
+import javax.xml.datatype.Duration;
 
 public class Game extends AppCompatActivity{
     ArrayList<Integer> nums = new ArrayList<Integer>();
     int level = 10,corr=0,wins=0,fails=0;
+    TextView Tfails,Twins,Tlevel;
     TextView S00,S01,S02,S03,S04,
             S10,S11,S12,S13,S14,
             S20,S21,S22,S23,S24,
@@ -29,8 +36,8 @@ public class Game extends AppCompatActivity{
             C40,C41,C42,C43,C44,
             C50,C51,C52,C53,C54;
     public ImageView[] circles = new ImageView[30];
-
-//            {
+    //Handler myHandler = new Handler();
+    //            {
 //            C00,C01,C02,C03,C04,
 //            C10,C11,C12,C13,C14,
 //            C20,C21,C22,C23,C24,
@@ -41,6 +48,15 @@ public class Game extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
+        Twins = (TextView) findViewById(R.id.wins);
+        Tfails = (TextView) findViewById(R.id.fails);
+        Tlevel = (TextView) findViewById(R.id.remain);
+//        myHandler.postDelayed(new Runnable() {
+//            @Override
+//            public void run() {
+//                delToast();
+//            }
+//        },1000);
         S00 = (TextView) findViewById(R.id.S00);
         S01 = (TextView) findViewById(R.id.S01);
         S02 = (TextView) findViewById(R.id.S02);
@@ -134,37 +150,38 @@ public class Game extends AppCompatActivity{
         C52 = (ImageView) findViewById(R.id.C52);
         C53 = (ImageView) findViewById(R.id.C53);
         C54 = (ImageView) findViewById(R.id.C54);
-        System.out.println(C00==null);
-        circles[0]=C00;
-        circles[1]=C01;
-        circles[2]=C02;
-        circles[3]=C03;
-        circles[4]=C04;
-        circles[5]=C10;
-        circles[6]=C11;
-        circles[7]=C12;
-        circles[8]=C13;
-        circles[9]=C14;
-        circles[10]=C20;
-        circles[11]=C21;
-        circles[12]=C22;
-        circles[13]=C23;
-        circles[14]=C24;
-        circles[15]=C30;
-        circles[16]=C31;
-        circles[17]=C32;
-        circles[18]=C33;
-        circles[19]=C34;
-        circles[20]=C40;
-        circles[21]=C41;
-        circles[22]=C42;
-        circles[23]=C43;
-        circles[24]=C44;
-        circles[25]=C50;
-        circles[26]=C51;
-        circles[27]=C52;
-        circles[28]=C53;
-        circles[29]=C54;
+        //System.out.println(C00==null);
+
+        circles[0] = C00;
+        circles[1] = C01;
+        circles[2] = C02;
+        circles[3] = C03;
+        circles[4] = C04;
+        circles[5] = C10;
+        circles[6] = C11;
+        circles[7] = C12;
+        circles[8] = C13;
+        circles[9] = C14;
+        circles[10] = C20;
+        circles[11] = C21;
+        circles[12] = C22;
+        circles[13] = C23;
+        circles[14] = C24;
+        circles[15] = C30;
+        circles[16] = C31;
+        circles[17] = C32;
+        circles[18] = C33;
+        circles[19] = C34;
+        circles[20] = C40;
+        circles[21] = C41;
+        circles[22] = C42;
+        circles[23] = C43;
+        circles[24] = C44;
+        circles[25] = C50;
+        circles[26] = C51;
+        circles[27] = C52;
+        circles[28] = C53;
+        circles[29] = C54;
 
 //        for(int i =0 ; i<30 ; i++)
 //            circles[i].setOnClickListener(this);
@@ -172,70 +189,105 @@ public class Game extends AppCompatActivity{
         generateNums(3);
 
     }
+    void delToast(){
+        Toast.makeText(this,"...", Toast.LENGTH_LONG);
+    }
     public void generateNums(int n){
+        nums.clear();
+        delay(1000);
         int[] num = new int[n];
         int i=0;
         Random rand = new Random();
-
-        while(nums.size()<n){
-            int random = rand.nextInt(30)+1;
+        while(i<n){
+            int random = rand.nextInt(30);
+            System.out.println(random);
             if (!nums.contains(random)) {
                 nums.add(random);
             }
-            numbers[nums.get(i) -1].setText(String.valueOf(i));
-            numbers[nums.get(i)-1].setAlpha(1);
+            else
+                continue;
+            numbers[random].setText(String.valueOf(i));
+            numbers[random].setAlpha(1);
             i++;
         }
-        try {
-            TimeUnit.MILLISECONDS.sleep(700);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        }
-
+//        try {
+//            TimeUnit.MILLISECONDS.sleep(700);
+//        } catch (InterruptedException e) {
+//            e.printStackTrace();
+//        }
+        delay(700);
         for(i = 0 ; i < n ; i++){
-            circles[nums.get(i)-1].setClickable(true);
-            circles[nums.get(i)-1].setAlpha((float)1.0);
+            circles[nums.get(i)].setClickable(true);
+            circles[nums.get(i)].setAlpha((float)1.0);
         }
     }
+    public void delay(int time){
+        new Timer().schedule(
+                new TimerTask() {
+                    @Override
+                    public void run() {
+                    }
+                },
+                time
+        );
+    }
+
     public void reset(){
         for(int i=0 ; i<30 ; i++){
-            //numbers[i].setAlpha(0);
+            numbers[i].setAlpha(0);
             circles[i].setAlpha((float)0.0);
             circles[i].setClickable(false);
         }
     }
     public void onCircleClick(View v){
         v.setAlpha(0);
+        v.setClickable(false);
         int i = 0;
-        while (circles[nums.get(i)-1].getAlpha()==0 && i<nums.size())
+        while ( i<nums.size() && circles[nums.get(i)].getAlpha()==0)
             i++;
-        if(i-1<nums.indexOf(v)){
+        System.out.println(i);
+        if (i!=0)System.out.println(circles[nums.get(i-1)].getId()==v.getId());
+        if(i==0 || circles[nums.get(i-1)].getId()!=v.getId()){
             fails++;
             level--;
+            Tfails.setText(String.valueOf(fails));
+            Tlevel.setText(String.valueOf(level));
             System.out.println("fail");
+            delay(5000);
             reset();
             if(level>0)
                 if(nums.size()!=3)
                     generateNums(nums.size()-1);
                 else
                     generateNums(nums.size());
+            else {
+
+                System.out.println("count age");
+            }
         }
         else {
             corr++;
 
             if (i == nums.size()){
                 System.out.println("win  ..");
+                delay(500);
                 if (level > 0) {
                     wins++;
                     level--;
+                    Twins.setText(String.valueOf(wins));
+                    Tlevel.setText(String.valueOf(level));
                     reset();
                     generateNums(nums.size() + 1);
+                }
+                else {
+                    reset();
+                    System.out.println("count age");
                 }
             }
         }
 
-        if(level==0)
-            System.out.println("count age");
+//        if(level==0)
+//            System.out.println("count age");
 
 
     }
