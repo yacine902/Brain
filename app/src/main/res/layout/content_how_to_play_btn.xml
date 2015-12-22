@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:weightSum="1">
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:paddingTop="20dp"
+    android:textAppearance="?android:attr/textAppearanceMedium"
+    android:id="@+id/textView"
+    android:shadowColor="#bd7777"
+    android:textColor="#fd6799c9"
+    android:textStyle="bold"
+    android:textSize="25dp"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:text="This is a brain training game which enables you to strengthen your instantaneous memory and eyesight"
+    android:layout_above="@+id/editText"
+    android:layout_alignParentTop="true" />
+
+<HorizontalScrollView
+    android:layout_width="match_parent"
+    android:layout_height="385dp"
+    android:id="@+id/horizontalScrollView"
+    android:fillViewport="false"
+    android:layout_alignParentBottom="true"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true" >
+
+</HorizontalScrollView>
+
+<EditText
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/editText"
+    android:text="1.    Click [START]. After a countdown (wait for 3,2,1), you will see some numbers.
+2.  Memorize the number's position on the screen quickly. The numbers will disappear for 0.7 seconds.
+3.	Then, some circles will appear
+4.	Click on the circles from the smallest number to the biggest number.
+5.	After 10 questions, the program will tell your brain age on the screen.
+Aim at the brain age of 20.
+"
+    android:textColor="#d48383"
+    android:layout_alignParentLeft="true"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentRight="true"
+    android:layout_alignParentEnd="true"
+    android:layout_alignParentBottom="true"
+    android:textSize="20dp" />
+</RelativeLayout>
