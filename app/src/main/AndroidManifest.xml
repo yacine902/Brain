@@ -42,6 +42,18 @@
             </intent-filter>
 
         </activity>
+        <activity android:name=".HowToPlayBtn"
+            android:label="HowToPlayBtn"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme.NoActionBar"
+            >
+            <intent-filter>
+                <action android:name="com.fdmkst.ltl_pc.brain.HowToPlayBtn" />
+                <category android:name="android.intent.category.DEFAULT" />
+
+            </intent-filter>
+
+        </activity>
         <activity android:name=".Game"
             android:label="Game"
             android:screenOrientation="portrait"
