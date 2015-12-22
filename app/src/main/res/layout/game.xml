@@ -12,9 +12,10 @@
     <GridLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:id="@+id/gridLayout"
         android:columnCount="5"
         android:rowCount="6"
-        android:background="#c8ffff"
+        android:background="#ffffff"
         android:useDefaultMargins="true"
         android:layout_gravity="center_horizontal"
         android:layout_margin="10dp"

@@ -86,10 +86,7 @@
             android:layout_margin="15dp"
             android:textColor="#ffffff"
             android:background="#3ba8de"
-            android:clickable="true"
-            android:contextClickable="true"
-            android:enabled="false"
-            android:onClick="logOutButton" />
+            android:clickable="true"/>
     </GridLayout>
 
 </RelativeLayout>

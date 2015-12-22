@@ -15,26 +15,22 @@ import com.facebook.login.LoginManager;
 
 public class MainMenu extends AppCompatActivity implements View.OnClickListener {
     Button startbtn;
+    Button logOut;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main_menu);
+
         startbtn = (Button) findViewById(R.id.start_button);
         startbtn.setOnClickListener(this);
-        Intent intent = getIntent();
+        logOut = (Button)findViewById(R.id.logout_button);
+        logOut.setOnClickListener(this);
 //        if (savedInstanceState == null) {
 //            getSupportFragmentManager().beginTransaction()
 //                    .add(R.id.container, new PlaceholderFragment()).commit();
 //        }
     }
-    public void logOutButton(View view){
-        Button logoutButton = (Button) view.findViewById(R.id.logout_button);
-        logoutButton.setOnClickListener(new View.OnClickListener(){
-            public void onClick(View v) {
-                LoginManager.getInstance().logOut();
-            }
-        });
-    }
+
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle app bar item clicks here. The app bar
@@ -51,18 +47,21 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
     private void startGame(){
         startActivity(new Intent("com.fdmkst.ltl_pc.brain.Game"));
     }
+
     @Override
     public void onClick(View v) {
         switch (v.getId()){
             case R.id.start_button:
+                System.out.println("starting game...");
                 startGame();
+                break;
+            case R.id.logout_button:
+                System.out.println("Logged out...");
+                LoginManager.getInstance().logOut();
+                finish();
                 break;
         }
     }
-
-    /**
-     * A placeholder fragment containing a simple view.
-     */
 
     public static class PlaceholderFragment extends Fragment {
 
@@ -83,7 +82,7 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
 
         }
     }
-    @Override
-    public void onBackPressed() {
-    }
+//    @Override
+//    public void onBackPressed() {
+//    }
 }

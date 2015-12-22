@@ -1,11 +1,14 @@
 package com.fdmkst.ltl_pc.brain;
 
 import android.app.Activity;
+import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
+import android.text.Layout;
 import android.view.View;
+import android.widget.GridLayout;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -21,6 +24,7 @@ import javax.xml.datatype.Duration;
 public class Game extends AppCompatActivity{
     ArrayList<Integer> nums = new ArrayList<Integer>();
     int level = 10,corr=0,wins=0,fails=0;
+    GridLayout gridL;
     TextView Tfails,Twins,Tlevel;
     TextView S00,S01,S02,S03,S04,
             S10,S11,S12,S13,S14,
@@ -183,26 +187,29 @@ public class Game extends AppCompatActivity{
         circles[28] = C53;
         circles[29] = C54;
 
+
+        gridL = (GridLayout)findViewById(R.id.gridLayout);
 //        for(int i =0 ; i<30 ; i++)
 //            circles[i].setOnClickListener(this);
         //System.out.println(circles[5].getAlpha());
         generateNums(3);
 
     }
-    void delToast(){
-        Toast.makeText(this,"...", Toast.LENGTH_LONG);
-    }
+//    void delToast(){
+//        Toast.makeText(this,"...", Toast.LENGTH_LONG);
+//    }
     public void generateNums(int n){
+        System.out.println("generating with n="+n);
         nums.clear();
-        delay(1000);
+        //delay(1000);
         int[] num = new int[n];
         int i=0;
         Random rand = new Random();
         while(i<n){
             int random = rand.nextInt(30);
-            System.out.println(random);
             if (!nums.contains(random)) {
                 nums.add(random);
+                System.out.println(random);
             }
             else
                 continue;
@@ -215,17 +222,36 @@ public class Game extends AppCompatActivity{
 //        } catch (InterruptedException e) {
 //            e.printStackTrace();
 //        }
-        delay(700);
-        for(i = 0 ; i < n ; i++){
-            circles[nums.get(i)].setClickable(true);
-            circles[nums.get(i)].setAlpha((float)1.0);
-        }
+        delay(700,n);
+//        for(i = 0 ; i < n ; i++){
+//            circles[nums.get(i)].setClickable(true);
+//            circles[nums.get(i)].setAlpha((float)1.0);
+//        }
     }
-    public void delay(int time){
+    public void delay(int time, final int n){
+        System.out.println("delay with n="+n);
         new Timer().schedule(
                 new TimerTask() {
                     @Override
                     public void run() {
+                        runOnUiThread(new Runnable() {
+                            @Override
+                            public void run() {
+                                System.out.println("Again!! delay with n="+n);
+
+                                // TODO Auto-generated method stub
+                                if(n==0){
+                                    System.out.println("delay found n ==0");
+                                    reset();
+                                    gridL.setBackgroundColor(0xffffff);
+                                }
+                                else
+                                for (int i = 0; i < n; i++) {
+                                    circles[nums.get(i)].setClickable(true);
+                                    circles[nums.get(i)].setAlpha((float) 1.0);
+                                }
+                            }
+                        });
                     }
                 },
                 time
@@ -233,6 +259,7 @@ public class Game extends AppCompatActivity{
     }
 
     public void reset(){
+        System.out.println("resetting...");
         for(int i=0 ; i<30 ; i++){
             numbers[i].setAlpha(0);
             circles[i].setAlpha((float)0.0);
@@ -253,45 +280,48 @@ public class Game extends AppCompatActivity{
             Tfails.setText(String.valueOf(fails));
             Tlevel.setText(String.valueOf(level));
             System.out.println("fail");
-            delay(5000);
-            reset();
+            gridL.setBackgroundColor(0xff7d7d);
+            delay(1000, 0);
+            //reset();
             if(level>0)
-                if(nums.size()!=3)
-                    generateNums(nums.size()-1);
-                else
+                if(nums.size()!=3) {
+                    generateNums(nums.size() - 1);
+                    //return;
+                }
+                else {
                     generateNums(nums.size());
+                    //return;
+                }
+
             else {
 
                 System.out.println("count age");
             }
-        }
-        else {
+        } else {
             corr++;
 
             if (i == nums.size()){
                 System.out.println("win  ..");
-                delay(500);
+                gridL.setBackgroundColor(0x7dff7d);
+                //delay(500);
                 if (level > 0) {
                     wins++;
                     level--;
                     Twins.setText(String.valueOf(wins));
                     Tlevel.setText(String.valueOf(level));
-                    reset();
+                    delay(1000, 0);
+                    //reset();
                     generateNums(nums.size() + 1);
+//                    return;
                 }
                 else {
+                    delay(1000,0);
+                    System.out.println("LAST reset calling..");
+
                     reset();
                     System.out.println("count age");
                 }
             }
         }
-
-//        if(level==0)
-//            System.out.println("count age");
-
-
     }
-
-
-
 }

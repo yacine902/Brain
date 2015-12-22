@@ -6,6 +6,7 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -22,6 +23,7 @@ import com.facebook.login.widget.LoginButton;
 
 
 public class MainFragment extends Fragment {
+    private ImageView logo;
     private TextView mTextDetail;
     private CallbackManager mcallbackManager;
     private AccessTokenTracker mTokenTracker;
@@ -32,8 +34,10 @@ public class MainFragment extends Fragment {
             AccessToken accessToken = loginResult.getAccessToken();
             Profile profile = Profile.getCurrentProfile();
             Intent goToMainMenu = new Intent(getContext(),MainMenu.class);
+            //logo.setClickable(true);
             startActivity(goToMainMenu);
         }
+
 
         @Override
         public void onCancel() {
@@ -80,7 +84,7 @@ public class MainFragment extends Fragment {
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
         LoginButton loginButton = (LoginButton) view.findViewById(R.id.login_button);
-        loginButton.setReadPermissions("user_friends");
+        //loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);
         loginButton.registerCallback(mcallbackManager,mcallback);
     }
@@ -89,6 +93,11 @@ public class MainFragment extends Fragment {
     public void onResume() {
         super.onResume();
         Profile profile = Profile.getCurrentProfile();
+        if(profile != null){
+            Intent goToMainMenu = new Intent(getContext(),MainMenu.class);
+            //logo.setClickable(true);
+            startActivity(goToMainMenu);
+        }
 //        if (profile != null)
 //            mTextDetail.setText("Welcome " + profile.getFirstName());
     }
