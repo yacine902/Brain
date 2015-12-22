@@ -6,7 +6,10 @@ import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.facebook.AccessToken;
@@ -28,6 +31,7 @@ public class MainFragment extends Fragment {
     private CallbackManager mcallbackManager;
     private AccessTokenTracker mTokenTracker;
     private ProfileTracker mProfileTracker;
+    private ImageButton goBackToMenuBtn;
     private FacebookCallback<LoginResult> mcallback = new FacebookCallback<LoginResult>() {
         @Override
         public void onSuccess(LoginResult loginResult) {
@@ -51,7 +55,6 @@ public class MainFragment extends Fragment {
     };
     public MainFragment(){
     }
-
     @Override
     public void onCreate(Bundle savedInstanceState){
         super.onCreate(savedInstanceState);
@@ -76,13 +79,27 @@ public class MainFragment extends Fragment {
 
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState){
-        return inflater.inflate(R.layout.fragment_main, container , false);
+        RelativeLayout mRelativeLayout = (RelativeLayout) inflater.inflate(R.layout.fragment_main,
+                container, false);
+        goBackToMenuBtn = (ImageButton) mRelativeLayout.findViewById(R.id.go_Back_to_MainMenu);
+        goBackToMenuBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println("Going back to Main menu...");
+                goBackToMenu();
+            }
+        });
+        return mRelativeLayout;
     }
 
 
+    private void goBackToMenu(){
+        startActivity(new Intent("com.fdmkst.ltl_pc.brain.MainMenu"));
+    }
     @Override
     public void onViewCreated(View view, Bundle savedInstanceState){
         super.onViewCreated(view, savedInstanceState);
+
         LoginButton loginButton = (LoginButton) view.findViewById(R.id.login_button);
         //loginButton.setReadPermissions("user_friends");
         loginButton.setFragment(this);

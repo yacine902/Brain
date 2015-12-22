@@ -14,8 +14,9 @@ import android.widget.Button;
 import com.facebook.login.LoginManager;
 
 public class MainMenu extends AppCompatActivity implements View.OnClickListener {
-    Button startbtn;
-    Button logOut;
+    private static Button startbtn;
+    private static Button logOut;
+    private static Button getHelpBtn;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -25,6 +26,8 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         startbtn.setOnClickListener(this);
         logOut = (Button)findViewById(R.id.logout_button);
         logOut.setOnClickListener(this);
+        getHelpBtn = (Button) findViewById(R.id.how_to_play_button);
+        getHelpBtn.setOnClickListener(this);
 //        if (savedInstanceState == null) {
 //            getSupportFragmentManager().beginTransaction()
 //                    .add(R.id.container, new PlaceholderFragment()).commit();
@@ -47,6 +50,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
     private void startGame(){
         startActivity(new Intent("com.fdmkst.ltl_pc.brain.Game"));
     }
+    private void getHelp(){
+        startActivity(new Intent("com.fdmkst.ltl_pc.brain.HowToPlayBtn"));
+    }
 
     @Override
     public void onClick(View v) {
@@ -59,6 +65,9 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
                 System.out.println("Logged out...");
                 LoginManager.getInstance().logOut();
                 finish();
+            case R.id.how_to_play_button:
+                System.out.println("Getting help...");
+                getHelp();
                 break;
         }
     }
