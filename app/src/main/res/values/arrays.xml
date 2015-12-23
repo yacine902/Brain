@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string-array name="circles">
+        <item>@id/C00</item>
+        <item>@id/C01</item>
+        <item>@id/C02</item>
+        <item>@id/C03</item>
+        <item>@id/C04</item>
+        <item>@id/C10</item>
+        <item>@id/C11</item>
+        <item>@id/C12</item>
+        <item>@id/C13</item>
+        <item>@id/C14</item>
+        <item>@id/C20</item>
+        <item>@id/C21</item>
+        <item>@id/C22</item>
+        <item>@id/C23</item>
+        <item>@id/C24</item>
+        <item>@id/C30</item>
+        <item>@id/C31</item>
+        <item>@id/C32</item>
+        <item>@id/C33</item>
+        <item>@id/C34</item>
+        <item>@id/C40</item>
+        <item>@id/C41</item>
+        <item>@id/C42</item>
+        <item>@id/C43</item>
+        <item>@id/C44</item>
+        <item>@id/C50</item>
+        <item>@id/C51</item>
+        <item>@id/C52</item>
+        <item>@id/C53</item>
+        <item>@id/C54</item>
+    </string-array>
+    <string-array name="numbers">
+        <item>@id/S00</item>
+        <item>@id/S01</item>
+        <item>@id/S02</item>
+        <item>@id/S03</item>
+        <item>@id/S04</item>
+        <item>@id/S10</item>
+        <item>@id/S11</item>
+        <item>@id/S12</item>
+        <item>@id/S13</item>
+        <item>@id/S14</item>
+        <item>@id/S20</item>
+        <item>@id/S21</item>
+        <item>@id/S22</item>
+        <item>@id/S23</item>
+        <item>@id/S24</item>
+        <item>@id/S30</item>
+        <item>@id/S31</item>
+        <item>@id/S32</item>
+        <item>@id/S33</item>
+        <item>@id/S34</item>
+        <item>@id/S40</item>
+        <item>@id/S41</item>
+        <item>@id/S42</item>
+        <item>@id/S43</item>
+        <item>@id/S44</item>
+        <item>@id/S50</item>
+        <item>@id/S51</item>
+        <item>@id/S52</item>
+        <item>@id/S53</item>
+        <item>@id/S54</item>
+    </string-array>
+</resources>

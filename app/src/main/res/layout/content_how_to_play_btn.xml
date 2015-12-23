@@ -35,18 +35,13 @@ android:weightSum="1">
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
     android:id="@+id/editText"
-    android:text="1.    Click [START]. After a countdown (wait for 3,2,1), you will see some numbers.
-2.  Memorize the number's position on the screen quickly. The numbers will disappear for 0.7 seconds.
-3.	Then, some circles will appear
-4.	Click on the circles from the smallest number to the biggest number.
-5.	After 10 questions, the program will tell your brain age on the screen.
-Aim at the brain age of 20.
-"
+    android:text="1.    Click [START]. After a countdown (wait for 3,2,1), you will see some numbers. 2.  Memorize the number&apos;s position on the screen quickly. The numbers will disappear for 0.7 seconds. 3.	Then, some circles will appear 4.	Click on the circles from the smallest number to the biggest number. 5.	After 10 questions, the program will tell your brain age on the screen. Aim at the brain age of 20. t         1.    Click [START]. After a countdown (wait for 3,2,1), you will see some numbers. 2.  Memorize the number&apos;s position on the screen quickly. The numbers will disappear for 0.7 seconds. 3.	Then, some circles will appear 4.	Click on the circles from the smallest number to the biggest number. 5.	After 10 questions, the program will tell your brain age on the screen. Aim at the brain age of 20. t"
     android:textColor="#d48383"
     android:layout_alignParentLeft="true"
     android:layout_alignParentStart="true"
     android:layout_alignParentRight="true"
     android:layout_alignParentEnd="true"
     android:layout_alignParentBottom="true"
-    android:textSize="20dp" />
+    android:textSize="20dp"
+    android:layout_alignTop="@+id/horizontalScrollView" />
 </RelativeLayout>

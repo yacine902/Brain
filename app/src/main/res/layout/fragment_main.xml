@@ -20,14 +20,19 @@
         android:layout_alignParentBottom="true"
     />
 
-    <ImageButton
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/go_Back_to_MainMenu"
-        android:src="@mipmap/original"
-        android:background="#00ffffff"
+        android:id="@+id/imageViewLogo"
+        android:layout_gravity="center"
+        android:background="@mipmap/original"
+        android:adjustViewBounds="false"
+        android:layout_alignWithParentIfMissing="false"
+        android:layout_centerVertical="true"
         android:layout_above="@+id/login_button"
-        android:layout_centerHorizontal="true" />
+        android:layout_centerHorizontal="true"
+        android:baselineAlignBottom="false" />
+
 
 
 </RelativeLayout>

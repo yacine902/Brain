@@ -81,14 +81,14 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState){
         RelativeLayout mRelativeLayout = (RelativeLayout) inflater.inflate(R.layout.fragment_main,
                 container, false);
-        goBackToMenuBtn = (ImageButton) mRelativeLayout.findViewById(R.id.go_Back_to_MainMenu);
-        goBackToMenuBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                System.out.println("Going back to Main menu...");
-                goBackToMenu();
-            }
-        });
+//        goBackToMenuBtn = (ImageButton) mRelativeLayout.findViewById(R.id.go_Back_to_MainMenu);
+//        goBackToMenuBtn.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                System.out.println("Going back to Main menu...");
+//                goBackToMenu();
+//            }
+//        });
         return mRelativeLayout;
     }
 
