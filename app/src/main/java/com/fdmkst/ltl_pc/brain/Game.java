@@ -108,6 +108,8 @@ public class Game extends AppCompatActivity{
         System.out.println("generating with n=" + n);
         reset();
         nums.clear();
+        CountDownActivity countDownActivity = new CountDownActivity();
+        countDownActivity.countDownTimer.start();
         handler.postDelayed(new Runnable() {
             @Override
             public void run() {
