@@ -3,6 +3,7 @@ package com.fdmkst.ltl_pc.brain;
 import android.app.Activity;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
+import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.os.Handler;
 import android.os.PersistableBundle;
@@ -44,6 +45,7 @@ public class Game extends AppCompatActivity{
         Tlevel = (TextView) findViewById(R.id.remain);
 
         TypedArray ArrayNums = getResources().obtainTypedArray(R.array.numbers);
+
         TypedArray ArrayCirs = getResources().obtainTypedArray(R.array.circles);
         for(int i = 0 ; i < 30 ; i++){
             numbers[i] = (TextView) findViewById(ArrayNums.getResourceId(i,-1));
@@ -151,6 +153,10 @@ public class Game extends AppCompatActivity{
         }
     }
 
+    public void ageCount(){
+
+    }
+
     public void onCircleClick(View v){
         v.setAlpha(0);
         v.setClickable(false);
@@ -169,6 +175,8 @@ public class Game extends AppCompatActivity{
                 positions[i].circle.disappear();
             }
             gridL.setBackgroundColor(0xffff7d7d);
+            MediaPlayer mp = MediaPlayer.create(this, R.raw.sfail);
+            mp.start();
             //delay(1000);
             handler.postDelayed(new Runnable() {
                 @Override
@@ -196,13 +204,16 @@ public class Game extends AppCompatActivity{
 
             if (i == nums.size()) {
                 System.out.println("win  ..");
+                wins++;
+                level--;
+                Twins.setText(String.valueOf(wins));
+                Tlevel.setText(String.valueOf(level));
                 gridL.setBackgroundColor(0xff7dff7d);
+                MediaPlayer mp = MediaPlayer.create(this, R.raw.swin);
+                mp.start();
                 //delay(500);
-                if (level > 1) {
-                    wins++;
-                    level--;
-                    Twins.setText(String.valueOf(wins));
-                    Tlevel.setText(String.valueOf(level));
+                if (level > 0) {
+
                     //delay(1000);
                     handler.postDelayed(new Runnable() {
                         @Override
@@ -218,6 +229,7 @@ public class Game extends AppCompatActivity{
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
+                            reset();
                             System.out.println("count age");
                         }
                     }, 1000);
