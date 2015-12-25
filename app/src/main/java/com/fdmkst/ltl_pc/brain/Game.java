@@ -51,16 +51,16 @@ public class Game extends AppCompatActivity{
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
-        textViewTime = (TextView) findViewById(R.id.textViewTimeCount);
-        startButton = (Button) findViewById(R.id.start_button);
-        textViewTime.setText("3");
-        final CounterClass timer = new CounterClass(180000,1000);
-        startButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                timer.start();
-            }
-        });
+//        textViewTime = (TextView) findViewById(R.id.textViewTimeCount);
+//        startButton = (Button) findViewById(R.id.start_button);
+//        textViewTime.setText("3");
+//        final CounterClass timer = new CounterClass(3000,1000);
+//        startButton.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                timer.start();
+//            }
+//        });
         Twins = (TextView) findViewById(R.id.wins);
         Tfails = (TextView) findViewById(R.id.fails);
         Tlevel = (TextView) findViewById(R.id.remain);
