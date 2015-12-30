@@ -35,6 +35,7 @@ import javax.xml.datatype.Duration;
 public class Game extends AppCompatActivity{
     private ArrayList<Integer> nums = new ArrayList<Integer>();
     private int level = 10,corr=0,wins=0,fails=0;
+    static int BAge;
     private Position[] positions = new Position[30];
 
     GridLayout gridL,gridL2;
@@ -42,7 +43,7 @@ public class Game extends AppCompatActivity{
     TextView Tfails,Twins,Tlevel;
     TextView[] numbers = new TextView[30];
     ImageView[] circles = new ImageView[30];
-    Thread thread;
+//    Thread thread;
     TextView textViewTime;
     Button startButton;
     final Handler handler = new Handler();
@@ -69,7 +70,7 @@ public class Game extends AppCompatActivity{
         TypedArray ArrayCirs = getResources().obtainTypedArray(R.array.circles);
         for(int i = 0 ; i < 30 ; i++){
             numbers[i] = (TextView) findViewById(ArrayNums.getResourceId(i,-1));
-            ArrayNums.recycle();
+            ArrayNums.recycle();//what does recycle do??
             circles[i] = (ImageView) findViewById(ArrayCirs.getResourceId(i,-1));
             ArrayCirs.recycle();
             positions[i] = new Position(i,circles[i],numbers[i]);
@@ -111,6 +112,12 @@ public class Game extends AppCompatActivity{
         public void setClickable(boolean a){
             image.setClickable(a);
         }
+        public boolean isAppearing(){
+            return image.getAlpha()!=0.0;
+        }
+        public int getId(){
+            return image.getId();
+        }
     }
 
     public class Number{
@@ -148,7 +155,7 @@ public class Game extends AppCompatActivity{
 
         handler.postDelayed(new Runnable() {
             @Override
-            public void run() {
+            public void run() { // how does this delaying work??
                 int i = 0;
                 Random rand = new Random();
                 while (i < n) {
@@ -183,9 +190,9 @@ public class Game extends AppCompatActivity{
         gridL2.setBackgroundColor(0xff2aaae1);
         outerL.setBackgroundColor(0xff2aaae1);
         for(int i=0 ; i<30 ; i++){
-            numbers[i].setAlpha(0);
-            circles[i].setAlpha((float)0.0);
-            circles[i].setClickable(false);
+            positions[i].number.disappear();
+            positions[i].circle.disappear();
+            positions[i].circle.setClickable(false);
         }
     }
     @TargetApi(Build.VERSION_CODES.GINGERBREAD)
@@ -219,8 +226,8 @@ public class Game extends AppCompatActivity{
         while ( i<nums.size() && circles[nums.get(i)].getAlpha()==0)
             i++;
         System.out.println(i);
-        if (i!=0)System.out.println(circles[nums.get(i-1)].getId()==v.getId());
-        if(i==0 || circles[nums.get(i-1)].getId()!=v.getId()){
+        if (i!=0)System.out.println(circles[nums.get(i - 1)].getId() == v.getId());
+        if(i==0 || circles[nums.get(i - 1)].getId() != v.getId()){
             fails++;
             level--;
             Tfails.setText(String.valueOf(fails));
@@ -249,14 +256,15 @@ public class Game extends AppCompatActivity{
                     else {
 
                         System.out.println("count age");
+                        AgeCount();
                     }
                 }
             }, 1000);
             //reset();
 
         } else {
-            corr++;
-
+            corr+=nums.size();
+            System.out.println("corr = "+corr);
             if ((i==9 && nums.size()>9)||(i == nums.size())) {
                 System.out.println("win  ..");
                 for(i=0;i<30;i++){
@@ -287,10 +295,28 @@ public class Game extends AppCompatActivity{
                         @Override
                         public void run() {
                             System.out.println("count age");
+                            AgeCount();
                         }
                     }, 1000);
                 }
             }
         }
+    }
+    public void AgeCount(){
+        int age;
+        reset();
+        if(corr>3000)
+            age = 20;
+        else
+            age = 120/(corr/50+1)+18;
+        System.out.println("corr = "+corr);
+        System.out.println("age = "+age);
+        BAge= age;
+        positions[17].number.setSize(100);
+        positions[17].number.setValue(age);
+        positions[17].number.appear();
+        //Tlevel.setTextSize(80);
+        //Tlevel.setText("Your Brain is of age: ");
+        //Tfails.setText("");Twins.setText("");
     }
 }
