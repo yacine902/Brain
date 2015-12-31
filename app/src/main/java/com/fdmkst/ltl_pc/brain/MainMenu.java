@@ -72,25 +72,25 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
         }
     }
 
-    public static class PlaceholderFragment extends Fragment {
-
-        public PlaceholderFragment() { }
-
-        @Override
-        public View onCreateView(LayoutInflater inflater, ViewGroup container,
-                                 Bundle savedInstanceState) {
-            View rootView = inflater.inflate(R.layout.main_menu,
-                    container, false);
-            return rootView;
-        }
-
-
-        @Override
-        public void onViewCreated(View view, Bundle savedInstanceState) {
-            super.onViewCreated(view, savedInstanceState);
-
-        }
-    }
+//    public static class PlaceholderFragment extends Fragment {
+//
+//        public PlaceholderFragment() { }
+//
+//        @Override
+//        public View onCreateView(LayoutInflater inflater, ViewGroup container,
+//                                 Bundle savedInstanceState) {
+//            View rootView = inflater.inflate(R.layout.main_menu,
+//                    container, false);
+//            return rootView;
+//        }
+//
+//
+//        @Override
+//        public void onViewCreated(View view, Bundle savedInstanceState) {
+//            super.onViewCreated(view, savedInstanceState);
+//
+//        }
+//    }
 //    @Override
 //    public void onBackPressed() {
 //    }

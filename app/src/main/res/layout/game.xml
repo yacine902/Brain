@@ -307,7 +307,7 @@
             android:layout_marginLeft="18dp"
             android:layout_marginRight="18dp"
             android:visibility="visible"
-            android:alpha="1"
+            android:alpha="0"
             android:textColor="#ffffff" />
         <TextView
             android:layout_width="wrap_content"

@@ -3,6 +3,7 @@ package com.fdmkst.ltl_pc.brain;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.content.Intent;
 import android.content.res.TypedArray;
 import android.graphics.drawable.Drawable;
 import android.os.Build;
@@ -12,14 +13,19 @@ import android.os.Handler;
 import android.os.PersistableBundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.Layout;
+import android.util.TypedValue;
 import android.view.View;
 import android.webkit.WebHistoryItem;
 import android.widget.Button;
 import android.widget.GridLayout;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
+import android.widget.TextClock;
 import android.widget.TextView;
 import android.widget.Toast;
+
+import org.w3c.dom.Text;
 
 import java.util.ArrayList;
 import java.util.Random;
@@ -46,25 +52,20 @@ public class Game extends AppCompatActivity{
 //    Thread thread;
     TextView textViewTime;
     Button startButton;
+    //TextView countDownTextViewInButton;
     final Handler handler = new Handler();
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.game);
-//        textViewTime = (TextView) findViewById(R.id.textViewTimeCount);
-//        startButton = (Button) findViewById(R.id.start_button);
-//        textViewTime.setText("3");
-//        final CounterClass timer = new CounterClass(3000,1000);
-//        startButton.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View v) {
-//                timer.start();
-//            }
-//        });
+        //AgeCount();
         Twins = (TextView) findViewById(R.id.wins);
         Tfails = (TextView) findViewById(R.id.fails);
         Tlevel = (TextView) findViewById(R.id.remain);
+
+        //countDownTextViewInButton = (TextView) findViewById(R.id.S32);
+        //countDownTextViewInButton.setText("3");
 
         TypedArray ArrayNums = getResources().obtainTypedArray(R.array.numbers);
         TypedArray ArrayCirs = getResources().obtainTypedArray(R.array.circles);
@@ -142,20 +143,40 @@ public class Game extends AppCompatActivity{
         }
     }
 
+
+    public void countDown(){
+
+        positions[12].number.setSize(100);
+        //positions[12].number.setValue(3);
+        positions[12].number.appear();
+        new CountDownTimer(4000, 1000) {
+
+            public void onTick(long millisUntilFinished) {
+                positions[12].number.setSize(100);
+                positions[12].number.appear();
+                positions[12].number.setValue((int) (millisUntilFinished / 1000));
+                System.out.println(" .." + (int) (millisUntilFinished / 1000));
+                System.out.println(" .."+numbers[12].getAlpha());
+
+            }
+
+            public void onFinish() {
+            }
+        }.start();
+
+
+    }
+
     public void generateNums(final int n){
         System.out.println("generating with n=" + n);
         reset();
         nums.clear();
-
-//        CountDownActivity countDownActivity = new CountDownActivity();
-//        countDownActivity.countDownTimer.start();
-//        positions[12].number.setValue(3);
-//        positions[12].number.setSize(150);
-//        positions[12].number.appear();
+        countDown();
 
         handler.postDelayed(new Runnable() {
             @Override
             public void run() { // how does this delaying work??
+                reset();
                 int i = 0;
                 Random rand = new Random();
                 while (i < n) {
@@ -169,7 +190,6 @@ public class Game extends AppCompatActivity{
                     if (i < 9) positions[random].number.appear();
                     i++;
                 }
-                //delay(700);
                 handler.postDelayed(new Runnable() {
                     @Override
                     public void run() {
@@ -179,43 +199,22 @@ public class Game extends AppCompatActivity{
                         }
                     }
                 }, 700);
-
             }
         }, 3000);
     }
 
     public void reset(){
         System.out.println("resetting...");
+        //System.out.println(numbers[0].getTextSize());
+        numbers[12].setTextSize(50);
         gridL.setBackgroundColor(0xff2aaae1);
         gridL2.setBackgroundColor(0xff2aaae1);
         outerL.setBackgroundColor(0xff2aaae1);
         for(int i=0 ; i<30 ; i++){
             positions[i].number.disappear();
+            //numbers[i].setMaxWidth(GridLayout.LayoutParams.WRAP_CONTENT);
             positions[i].circle.disappear();
             positions[i].circle.setClickable(false);
-        }
-    }
-    @TargetApi(Build.VERSION_CODES.GINGERBREAD)
-    @SuppressLint("NewApi")
-    public class CounterClass extends CountDownTimer {
-        @Override
-        public void onTick(long millisUntilFinished) {
-            long millis = millisUntilFinished;
-            String hms = String.format("%01d", TimeUnit.MILLISECONDS.toMinutes(millis)-
-                    TimeUnit.HOURS.toMinutes(TimeUnit.MILLISECONDS.toHours(millis)));
-            System.out.println(hms);
-            textViewTime.setText(hms);
-        }
-
-        @Override
-        public void onFinish() {
-            textViewTime.setText("GO");
-
-        }
-
-        public CounterClass(long millisInFuture,long countDownInterval){
-            super(millisInFuture,countDownInterval);
-
         }
     }
 
@@ -260,7 +259,6 @@ public class Game extends AppCompatActivity{
                     }
                 }
             }, 1000);
-            //reset();
 
         } else {
             corr+=nums.size();
@@ -273,22 +271,18 @@ public class Game extends AppCompatActivity{
                 gridL.setBackgroundColor(0xff7dff7d);
                 gridL2.setBackgroundColor(0xff7dff7d);
                 outerL.setBackgroundColor(0xff7dff7d);
-                //delay(500);
+                wins++;
+                level--;
+                Twins.setText(String.valueOf(wins));
+                Tlevel.setText(String.valueOf(level));
                 if (level > 1) {
-                    wins++;
-                    level--;
-                    Twins.setText(String.valueOf(wins));
-                    Tlevel.setText(String.valueOf(level));
-                    //delay(1000);
+
                     handler.postDelayed(new Runnable() {
                         @Override
                         public void run() {
                             generateNums(nums.size() + 1);
                         }
                     }, 1000);
-                    //reset();
-
-//                    return;
                 }
                 else {
                     handler.postDelayed(new Runnable() {
@@ -302,21 +296,19 @@ public class Game extends AppCompatActivity{
             }
         }
     }
+
     public void AgeCount(){
         int age;
         reset();
-        if(corr>3000)
-            age = 20;
-        else
-            age = 120/(corr/50+1)+18;
-        System.out.println("corr = "+corr);
-        System.out.println("age = "+age);
-        BAge= age;
-        positions[17].number.setSize(100);
-        positions[17].number.setValue(age);
-        positions[17].number.appear();
-        //Tlevel.setTextSize(80);
-        //Tlevel.setText("Your Brain is of age: ");
-        //Tfails.setText("");Twins.setText("");
+//        if(corr>3000)
+//            age = 20;
+//        else
+        age = 100/(corr/30+1)+20;
+        BAge = age;
+        System.out.println("corr = " + corr);
+        System.out.println("age = " + BAge);
+        Intent intent = new Intent("com.fdmkst.ltl_pc.brain.AgeCount");
+        intent.putExtra("age", Integer.toString(BAge));
+        startActivity(intent);
     }
 }
