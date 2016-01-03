@@ -2,7 +2,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:weightSum="1">
+    android:weightSum="1"
+    android:background="#2aaae1">
     <ScrollView android:layout_width="match_parent"
         android:layout_height="match_parent">
         <LinearLayout android:layout_height="match_parent"
@@ -10,67 +11,96 @@
             android:orientation="vertical">
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/stepOne"
+                android:layout_marginLeft="15dp"
                 android:text="1.	Click Start.After a countdown (wait for 3,2,1), you will see some numbers."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
             <ImageView
                 android:id="@+id/imageLabel"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/stepOne"
-                android:src="@mipmap/step_one" />
+                android:src="@mipmap/step_one"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp" />
             <TextView
                 android:layout_width="match_parent"
-                android:layout_height="87dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:id="@+id/step_two"
                 android:layout_below="@+id/imageLabel"
                 android:text="2.  Memorize the number&apos;s position on the screen quickly. The numbers will disappear for 0.7 seconds."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/step_three"
+                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/step_two"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="3.  Then, some circles will appear"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
             <ImageView
                 android:id="@+id/imageLabel1"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/step_three"
-                android:src="@mipmap/step_2" />
+                android:src="@mipmap/step_2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/step_four"
+                android:layout_marginLeft="15dp"
                 android:layout_below="@+id/imageLabel1"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="4. Click on the circles from the smallest number to the biggest number."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
                 android:id="@+id/step_five"
                 android:layout_below="@+id/step_four"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="15dp"
                 android:text="5. In this question, click 3→8→9."
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
             <ImageView
                 android:id="@+id/imageLabel2"
                 android:layout_width="match_parent"
-                android:layout_height="100dp"
+                android:layout_height="wrap_content"
                 android:layout_below="@+id/step_five"
-                android:src="@mipmap/step_2" />
+                android:src="@mipmap/step_2"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginRight="15dp" />
             <TextView
                 android:layout_width="wrap_content"
-                android:layout_height="50dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
                 android:id="@+id/step_six"
                 android:layout_below="@+id/imageLabel2"
-                android:layout_marginTop="10dp"
+                android:layout_marginTop="15dp"
                 android:text="6. After 10 questions, the program will tell your brain age on the screen. Aim at the brain age of 20"
-                android:textSize="20dp" />
+                android:textSize="20dp"
+                android:layout_marginRight="15dp"
+                android:textColor="#ffffff" />
         </LinearLayout>
     </ScrollView>
 

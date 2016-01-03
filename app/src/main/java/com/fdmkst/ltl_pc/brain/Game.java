@@ -143,16 +143,38 @@ public class Game extends AppCompatActivity{
         }
     }
 
+//    public void countDown(){
+//
+//        positions[12].number.setSize(100);
+//        //positions[12].number.setValue(3);
+//        positions[12].number.appear();
+//        new CountDownTimer(4000, 1000) {
+//
+//            public void onTick(long millisUntilFinished) {
+//                positions[12].number.setSize(100);
+//                positions[12].number.appear();
+//                positions[12].number.setValue((int) (millisUntilFinished / 1000));
+//                System.out.println(" .." + (int) (millisUntilFinished / 1000));
+//                System.out.println(" .."+numbers[12].getAlpha());
+//
+//            }
+//
+//            public void onFinish() {
+//            }
+//        }.start();
+//
+//
+//    }
 
     public void countDown(){
 
-        positions[12].number.setSize(100);
+        //positions[12].number.setSize(100);
         //positions[12].number.setValue(3);
         positions[12].number.appear();
         new CountDownTimer(4000, 1000) {
 
             public void onTick(long millisUntilFinished) {
-                positions[12].number.setSize(100);
+                //positions[12].number.setSize(100);
                 positions[12].number.appear();
                 positions[12].number.setValue((int) (millisUntilFinished / 1000));
                 System.out.println(" .." + (int) (millisUntilFinished / 1000));
