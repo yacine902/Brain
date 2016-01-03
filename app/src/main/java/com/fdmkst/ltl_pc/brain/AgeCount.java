@@ -74,11 +74,10 @@ public class AgeCount extends AppCompatActivity implements View.OnClickListener{
         System.out.println("ma brain age " + s);
     }
     public void sharePhotoToFacebook(){
-        System.out.println("age>>"+s);
         Bitmap image = BitmapFactory.decodeResource(getResources(), R.mipmap.original);
         SharePhoto photo = new SharePhoto.Builder()
                 .setBitmap(image)
-                .setCaption("The age of your Brain is " + s)
+                .setCaption("Check it out guys,my brain is Young " )
                 .build();
 
         SharePhotoContent content = new SharePhotoContent.Builder()

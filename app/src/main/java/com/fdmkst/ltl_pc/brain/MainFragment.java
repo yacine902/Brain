@@ -23,8 +23,6 @@ import com.facebook.ProfileTracker;
 import com.facebook.login.LoginResult;
 import com.facebook.login.widget.LoginButton;
 
-
-
 public class MainFragment extends Fragment {
     private ImageView logo;
     private TextView mTextDetail;
@@ -76,7 +74,6 @@ public class MainFragment extends Fragment {
         //mTokenTracker.startTracking();
         //mProfileTracker.startTracking();
     }
-
     @Override
     public View onCreateView(LayoutInflater inflater,ViewGroup container, Bundle savedInstanceState){
         RelativeLayout mRelativeLayout = (RelativeLayout) inflater.inflate(R.layout.fragment_main,
@@ -91,8 +88,6 @@ public class MainFragment extends Fragment {
 //        });
         return mRelativeLayout;
     }
-
-
     private void goBackToMenu(){
         startActivity(new Intent("com.fdmkst.ltl_pc.brain.MainMenu"));
     }
@@ -105,7 +100,6 @@ public class MainFragment extends Fragment {
         loginButton.setFragment(this);
         loginButton.registerCallback(mcallbackManager,mcallback);
     }
-
     @Override
     public void onResume() {
         super.onResume();
@@ -118,7 +112,6 @@ public class MainFragment extends Fragment {
 //        if (profile != null)
 //            mTextDetail.setText("Welcome " + profile.getFirstName());
     }
-
     @Override
     public void onStop(){
         super.onStop();
