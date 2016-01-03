@@ -1,7 +1,10 @@
 package com.fdmkst.ltl_pc.brain;
 
+import android.app.Activity;
 import android.app.Fragment;
 import android.content.Intent;
+import android.graphics.Bitmap;
+import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
@@ -12,11 +15,15 @@ import android.view.Window;
 import android.widget.Button;
 
 import com.facebook.login.LoginManager;
+import com.facebook.share.ShareApi;
+import com.facebook.share.model.SharePhoto;
+import com.facebook.share.model.SharePhotoContent;
 
 public class MainMenu extends AppCompatActivity implements View.OnClickListener {
     private static Button startbtn;
     private static Button logOut;
     private static Button getHelpBtn;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -65,6 +72,7 @@ public class MainMenu extends AppCompatActivity implements View.OnClickListener 
                 System.out.println("Logged out...");
                 LoginManager.getInstance().logOut();
                 finish();
+                break;
             case R.id.how_to_play_button:
                 System.out.println("Getting help...");
                 getHelp();

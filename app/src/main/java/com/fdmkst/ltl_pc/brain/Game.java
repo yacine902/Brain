@@ -325,7 +325,7 @@ public class Game extends AppCompatActivity{
 //        if(corr>3000)
 //            age = 20;
 //        else
-        age = 100/(corr/30+1)+20;
+        age = (int) (120*Math.exp(-0.015*corr)+20);
         BAge = age;
         System.out.println("corr = " + corr);
         System.out.println("age = " + BAge);
